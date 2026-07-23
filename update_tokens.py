@@ -3,6 +3,7 @@ import requests
 
 # === Guna data terus dari GitHub awak ===
 UIDPASS_URL = "https://raw.githubusercontent.com/amarirfan1191/apilikeff/main/uidpass.json"
+TOKEN_FILE = "tokens.json"  # <-- Baris ini tadi hilang, sekarang dah betul
 
 # Alamat API
 API_URL = "https://jwt-steel-seven.vercel.app/token"
@@ -54,7 +55,7 @@ def main():
     # Ikut format data awak: guna kunci "pass" dan gelung betul
     for nama, maklumat in data_akaun.items():
         uid = maklumat["uid"]
-        kata_laluan = maklumat["pass"]  # <-- Kunci awak ialah "pass", bukan "password"
+        kata_laluan = maklumat["pass"]
         print(f"Proses {nama} | UID: {uid}")
         token = fetch_token(uid, kata_laluan)
         if token:
