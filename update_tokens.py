@@ -3,7 +3,6 @@ import requests
 
 # === Guna data terus dari GitHub awak ===
 UIDPASS_URL = "https://raw.githubusercontent.com/amarirfan1191/apilikeff/main/uidpass.json"
-TOKEN_FILE = "tokens.json"
 
 # Alamat API
 API_URL = "https://jwt-steel-seven.vercel.app/token"
